@@ -20,6 +20,10 @@ import {
   styled,
 } from "@mui/material";
 
+import { useNavigate } from "react-router-dom";
+
+
+
 const Container = styled(FormGroup)`
   width: 50%;
   margin: 9% auto 0 auto;
@@ -44,12 +48,15 @@ const AddUser = () => {
 
   const [user, setUser] = useState(initialValue);
 
+  const navigate= useNavigate();
+
   const onValueChange=(e)=>{
     setUser({...user,[e.target.name]:e.target.value})
 
   }
   const adduserDetails=async()=>{
     await addUser(user);
+    navigate('/all');
   }
 
   //  ===================================

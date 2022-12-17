@@ -1,18 +1,25 @@
 {
   "users": [
     {
-      "user": "Dilbar",
-      "username": "DilbarAli",
-      "email": "Dilbar@gmail.com",
-      "phone": "034452758",
-      "id": 1
-    },
-    {
-      "name": "Dilbar Ali",
+      "name": "Dilbar",
       "username": "khan ",
       "email": "dilbarali0013@gmail.com",
       "phone": "3494704553",
+      "id": 1
+    },
+    {
+      "name": "zeeshan",
+      "username": "zeeshan ali",
+      "email": "hilurefo.apevufi@rungel.net",
+      "phone": "3494704553",
       "id": 2
+    },
+    {
+      "name": "zuhaib",
+      "username": "zuhaib raza",
+      "email": "zuhaib@gmail.com",
+      "phone": "3494704553",
+      "id": 3
     }
   ]
 }
