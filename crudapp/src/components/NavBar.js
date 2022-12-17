@@ -14,10 +14,11 @@ const Header=styled(AppBar)`
 background:#111111;
 `
 
-const Tab=styled(Typography)`
+const Tab=styled(NavLink)`
 font-size:20px;
 margin-right:20px;
-
+color:inherit;
+text-decoration:none;
 
 `
 const NavBar = () => {
@@ -25,9 +26,9 @@ const NavBar = () => {
    
      <Header position='static'>
         <Toolbar>
-            <NavLink to="/">Movies Flex</NavLink>
-            <NavLink to="/all">All Movies</NavLink>
-            <NavLink to="add">Add Movies</NavLink>
+            <Tab to="/">Movies Flex</Tab>
+            <Tab to="/all">All Movies</Tab>
+            <Tab to="add">Add Movies</Tab>
         </Toolbar>
      </Header>
     
