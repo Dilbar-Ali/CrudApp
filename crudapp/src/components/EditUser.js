@@ -1,12 +1,11 @@
 import React from "react";
 
-
 // -------------DB IMPORT-------------
 
-import {addUser} from "../service/api"
+import { getUser,editUser } from "../service/api";
 // _______Here now we state useHooks _____
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // _________This is material Ui _________
 
@@ -20,9 +19,7 @@ import {
   styled,
 } from "@mui/material";
 
-import { useNavigate } from "react-router-dom";
-
-
+import { useNavigate, useParams } from "react-router-dom";
 
 const Container = styled(FormGroup)`
   width: 50%;
@@ -48,16 +45,26 @@ const EditUser = () => {
 
   const [user, setUser] = useState(initialValue);
 
-  const navigate= useNavigate();
+  const navigate = useNavigate();
 
-  const onValueChange=(e)=>{
-    setUser({...user,[e.target.name]:e.target.value})
+  const {id}=useParams();
 
-  }
-  const adduserDetails=async()=>{
-    await addUser(user);
-    navigate('/all');
-  }
+  useEffect(() => {
+    getUserData();
+  }, []);
+
+  const getUserData = async () => {
+    let response = await getUser(id);
+    setUser(response.data);
+  };
+
+  const onValueChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
+  const adduserDetails = async() => {
+    await editUser(user,id);
+    navigate("/all");
+  };
 
   //  ===================================
   return (
@@ -65,23 +72,25 @@ const EditUser = () => {
       <Typography variant="h5">Edit User</Typography>
       <FormControl>
         <InputLabel>Name</InputLabel>
-        <Input onChange={(e)=>onValueChange(e) }name="name" />
+        <Input onChange={(e) => onValueChange(e)} name="name" value={user.name} />
       </FormControl>
       <FormControl>
         <InputLabel>Username</InputLabel>
-        <Input onChange={(e)=>onValueChange(e)} name="username" />
+        <Input onChange={(e) => onValueChange(e)} name="username" value={user.username}/>
       </FormControl>
       <FormControl>
         <InputLabel>Email</InputLabel>
-        <Input onChange={(e)=>onValueChange(e)} name="email" />
+        <Input onChange={(e) => onValueChange(e)} name="email" value={user.email} />
       </FormControl>
       <FormControl>
         <InputLabel>Phone</InputLabel>
-        <Input onChange={(e)=>onValueChange(e)} name="phone"  />
+        <Input onChange={(e) => onValueChange(e)} name="phone" value={user.phone} />
       </FormControl>
 
       <FormControl>
-        <Button variant="contained" onClick={()=>adduserDetails()}>Edit User</Button>
+        <Button variant="contained" onClick={() => adduserDetails()}>
+          Edit User
+        </Button>
       </FormControl>
     </Container>
   );
