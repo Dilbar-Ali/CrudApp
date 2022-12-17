@@ -1,50 +1,80 @@
 import React from "react";
 
+
+// -------------DB IMPORT-------------
+
+import {addUser} from "../service/api"
 // _______Here now we state useHooks _____
 
-import { FormControl, FormGroup, InputLabel ,Input ,Typography , Button, styled} from "@mui/material";
+import { useState } from "react";
 
+// _________This is material Ui _________
 
-const Container =styled(FormGroup)`
+import {
+  FormControl,
+  FormGroup,
+  InputLabel,
+  Input,
+  Typography,
+  Button,
+  styled,
+} from "@mui/material";
 
-width:50%;
-margin:9% auto 0 auto;
+const Container = styled(FormGroup)`
+  width: 50%;
+  margin: 9% auto 0 auto;
 
- /* ______For child component handle through parent ___ */
+  /* ______For child component handle through parent ___ */
 
-  & >div{
-    margin-top:20px;
+  & > div {
+    margin-top: 20px;
   }
+`;
 
-
-
-`
-
+const initialValue = {
+  name: "",
+  username: "",
+  email: "",
+  phone: "",
+};
 
 const AddUser = () => {
+  // ===================================
+  // _______ React Hooks portion ________
+
+  const [user, setUser] = useState(initialValue);
+
+  const onValueChange=(e)=>{
+    setUser({...user,[e.target.name]:e.target.value})
+
+  }
+  const adduserDetails=async()=>{
+    await addUser(user);
+  }
+
+  //  ===================================
   return (
     <Container>
-
-    <Typography variant="h5">Add User</Typography>
+      <Typography variant="h5">Add User</Typography>
       <FormControl>
         <InputLabel>Name</InputLabel>
-        <Input/>
+        <Input onChange={(e)=>onValueChange(e) }name="name" />
       </FormControl>
       <FormControl>
         <InputLabel>Username</InputLabel>
-        <Input/>
+        <Input onChange={(e)=>onValueChange(e)} name="username" />
       </FormControl>
       <FormControl>
         <InputLabel>Email</InputLabel>
-        <Input/>
+        <Input onChange={(e)=>onValueChange(e)} name="email" />
       </FormControl>
       <FormControl>
         <InputLabel>Phone</InputLabel>
-        <Input/>
+        <Input onChange={(e)=>onValueChange(e)} name="phone"  />
       </FormControl>
 
       <FormControl>
-      <Button variant="contained">Add User</Button>
+        <Button variant="contained" onClick={()=>adduserDetails()}>Add User</Button>
       </FormControl>
     </Container>
   );

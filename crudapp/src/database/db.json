@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "user": "Dilbar",
+      "username": "DilbarAli",
+      "email": "Dilbar@gmail.com",
+      "phone": "034452758",
+      "id": 1
+    },
+    {
+      "name": "Dilbar Ali",
+      "username": "khan ",
+      "email": "dilbarali0013@gmail.com",
+      "phone": "3494704553",
+      "id": 2
+    }
+  ]
+}
