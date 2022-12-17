@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import "./allusers.css";
+import DeleteIcon from '@mui/icons-material/Delete';
+import SaveAsIcon from '@mui/icons-material/SaveAs';
 import {
   Table,
   TableCell,
@@ -66,8 +68,8 @@ getUsersDetails();
             <TableCell>{user.email}</TableCell>
             <TableCell>{user.phone}</TableCell>
             <TableCell>
-              <Button variant="contained" style={{marginRight:10}}component={Link} to={`/edit/${user.id}`} >Edit</Button>
-              <Button variant="contained" color="secondary"  onClick={()=>deleteUserData(user.id)}>Delete</Button>
+              <Button variant="contained" style={{marginRight:10}}component={Link} to={`/edit/${user.id}`} ><SaveAsIcon/></Button>
+              <Button variant="contained" color="secondary"  onClick={()=>deleteUserData(user.id)}><DeleteIcon/></Button>
             </TableCell>
           </TBody>
         ))

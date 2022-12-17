@@ -1,5 +1,6 @@
 import React from "react";
 import "./moviesFlex.css";
+import DeleteIcon from '@mui/icons-material/Delete';
 const MoviesFlex = () => {
   return (
     <div className="main">
@@ -9,6 +10,7 @@ const MoviesFlex = () => {
         </h1>
         <div className="left">
           <p>
+          <DeleteIcon/>
             Each color can be represented in many different ways. For example
             blue can also be represented as. It doesn't matter which one you
             choose as long as it's a valid color.

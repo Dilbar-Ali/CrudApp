@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -19,7 +20,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "json-server":"json-server --watch src/database/db.json --host 127.0.0.1 --port 3002",
+    "json-server": "json-server --watch src/database/db.json --host 127.0.0.1 --port 3002",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
