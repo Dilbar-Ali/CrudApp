@@ -37,4 +37,11 @@ button{
     background-color: crimson;
     color: white;
     border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+.link Link{
+    text-decoration: none;
+    color: white; 
 }

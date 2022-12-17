@@ -20,6 +20,7 @@ margin-right:20px;
 color:inherit;
 text-decoration:none;
 
+
 & >span{
    color: crimson;;
    font-weight:700;
@@ -33,7 +34,7 @@ const NavBar = () => {
         <Toolbar>
             <Tab to="/">Movies <span className='span'> Flex</span> </Tab>
             <Tab to="/all">All Movies</Tab>
-            <Tab to="add">Add Movies</Tab>
+            <Tab to="/add">Add Movies</Tab>
         </Toolbar>
      </Header>
     
