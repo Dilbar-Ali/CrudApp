@@ -41,7 +41,7 @@ const AllUsers = () => {
 
   const deleteUserData=async(id)=>{
 await deleteUser(id);
-getUsers();
+getUsersDetails();
   }
 
   return (
