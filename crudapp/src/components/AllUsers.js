@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import "./allusers.css";
 import {
   Table,
   TableCell,
@@ -43,11 +43,11 @@ const AllUsers = () => {
 
   const deleteUserData=async(id)=>{
 await deleteUser(id);
-getUsersDetails();
+getUsers();
   }
 
   return (
-    <Table>
+    <Table className="table">
       <TableHead>
         <Thead>
           <TableCell>id</TableCell>
