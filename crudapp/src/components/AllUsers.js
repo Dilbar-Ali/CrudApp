@@ -27,8 +27,6 @@ const TBody=styled(TableRow)`
   font-size:20px;
 }
 `
-
-
 const AllUsers = () => {
   const [users, setUsers] = useState([]);
   useEffect(() => {
@@ -54,7 +52,7 @@ getUsers();
           <TableCell>Name</TableCell>
           <TableCell>Username</TableCell>
           <TableCell>Email</TableCell>
-          <TableCell>Phone</TableCell>
+          <TableCell>Movies</TableCell>
           <TableCell>Action</TableCell>
         </Thead>
       </TableHead>
@@ -70,8 +68,6 @@ getUsers();
             <TableCell>
               <Button variant="contained" style={{marginRight:10}}component={Link} to={`/edit/${user.id}`} >Edit</Button>
               <Button variant="contained" color="secondary"  onClick={()=>deleteUserData(user.id)}>Delete</Button>
-
-
             </TableCell>
           </TBody>
         ))

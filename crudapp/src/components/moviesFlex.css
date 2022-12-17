@@ -1,3 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    color: white;
+    /* margin-top:90px */
+}
 h1 span{
     color: crimson;
+   
+}
+.main{
+    background-image: url(../woman-gfd174a308_1920.jpg);
+    height: 83vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+.main1{
+    width: 90%;
+    margin: auto;
+}
+.left{
+    width: 30%;
+    color: white;
+    margin-right: 90px;
+}
+button{
+    margin-top: 20px;
+    padding: 9px;
+    background-color: crimson;
+    color: white;
+    border: none;
 }

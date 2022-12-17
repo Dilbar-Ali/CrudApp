@@ -42,7 +42,7 @@ export const deleteUser=async(id)=>{
         return await axios.delete(`${API_URL}/${id}`);
     
     }catch(error){
-        console.log("Error while calling EditingApi .",error.message)
+        console.log("Error while calling Delete Api .",error.message)
     }
     }
     

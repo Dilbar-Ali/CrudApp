@@ -1,18 +1,18 @@
 {
   "users": [
     {
-      "name": "zeeshan Ali",
-      "username": "zeeshan ali",
-      "email": "hilurefo.apevufi@rungel.net",
-      "phone": "3494704553",
-      "id": 2
+      "name": "Dilbar Ali",
+      "username": "Khan",
+      "email": "Dilbar@gmail.com",
+      "phone": "Diwali ",
+      "id": 1
     },
     {
-      "name": "Dilbar ",
+      "name": "zeeshan",
       "username": "ALi",
-      "email": "Dilar@gmail.com",
-      "phone": "03554511108",
-      "id": 3
+      "email": "zuhaib@gmail.com",
+      "phone": "Dark world",
+      "id": 2
     }
   ]
 }
