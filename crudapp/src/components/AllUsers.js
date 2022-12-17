@@ -6,12 +6,12 @@ import {
   TableRow,
   TableHead,
   TableBody,
-  styled
+  styled,
+  Button
 } from "@mui/material";
 import React from "react";
 
 import { getUsers } from "../service/api";
-
 
 const Thead=styled(TableRow)`
 background:#000;
@@ -48,6 +48,7 @@ const AllUsers = () => {
           <TableCell>Username</TableCell>
           <TableCell>Email</TableCell>
           <TableCell>Phone</TableCell>
+          <TableCell></TableCell>
         </Thead>
       </TableHead>
       <TableBody>
@@ -59,6 +60,12 @@ const AllUsers = () => {
             <TableCell>{user.username}</TableCell>
             <TableCell>{user.email}</TableCell>
             <TableCell>{user.phone}</TableCell>
+            <TableCell>
+              <Button variant="contained" style={{marginRight:10}}>Delete</Button>
+              <Button variant="contained" color="secondary">Edit</Button>
+
+
+            </TableCell>
           </TBody>
         ))
         }
