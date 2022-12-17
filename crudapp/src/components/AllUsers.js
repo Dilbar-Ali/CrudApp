@@ -55,7 +55,7 @@ getUsers();
           <TableCell>Username</TableCell>
           <TableCell>Email</TableCell>
           <TableCell>Phone</TableCell>
-          <TableCell></TableCell>
+          <TableCell>Action</TableCell>
         </Thead>
       </TableHead>
       <TableBody>

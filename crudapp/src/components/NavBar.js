@@ -11,14 +11,19 @@ import {NavLink} from "react-router-dom";
 
 // ____________Typogaphy Style of Material Ui _____________
 const Header=styled(AppBar)`
-background:#111111;
+background:black;
 `
 
 const Tab=styled(NavLink)`
-font-size:20px;
+font-size:18px;
 margin-right:20px;
 color:inherit;
 text-decoration:none;
+
+& >span{
+   color: crimson;;
+   font-weight:700;
+}
 
 `
 const NavBar = () => {
@@ -26,7 +31,7 @@ const NavBar = () => {
    
      <Header position='static'>
         <Toolbar>
-            <Tab to="/">Movies Flex</Tab>
+            <Tab to="/">Movies <span className='span'> Flex</span> </Tab>
             <Tab to="/all">All Movies</Tab>
             <Tab to="add">Add Movies</Tab>
         </Toolbar>
