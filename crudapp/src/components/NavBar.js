@@ -6,7 +6,7 @@ import { AppBar, Toolbar,Typography ,styled}from '@mui/material';
 
 // _______________For Routing ___________
 
-
+import {NavLink} from "react-router-dom";
 
 
 // ____________Typogaphy Style of Material Ui _____________
@@ -25,9 +25,9 @@ const NavBar = () => {
    
      <Header position='static'>
         <Toolbar>
-            <Tab>Movies Flex</Tab>
-            <Tab>All Movies</Tab>
-            <Tab>Add Movies</Tab>
+            <NavLink to="/">Movies Flex</NavLink>
+            <NavLink to="/all">All Movies</NavLink>
+            <NavLink to="add">Add Movies</NavLink>
         </Toolbar>
      </Header>
     
