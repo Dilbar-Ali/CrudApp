@@ -27,6 +27,8 @@ import { useNavigate } from "react-router-dom";
 const Container = styled(FormGroup)`
   width: 50%;
   margin: 9% auto 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+  padding :20px;
 
   /* ______For child component handle through parent ___ */
 

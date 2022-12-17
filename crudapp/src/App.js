@@ -13,6 +13,7 @@ import MoviesFlex from './components/MoviesFlex';
 import AllUsers from './components/AllUsers';
 import AddUser from './components/AddUser';
 import EditUser from './components/EditUser';
+import Fotter from './components/Fotter';
 
 
 
@@ -21,6 +22,7 @@ function App() {
   
     <BrowserRouter>
       <NavBar/>
+   
       <Routes>
 
      <Route path='/' element={<MoviesFlex/>}/>
@@ -29,6 +31,7 @@ function App() {
      <Route path='/edit/:id' element={ <EditUser/>}/>
 
      </Routes>
+     <Fotter/>
     </BrowserRouter>
   );
 }
