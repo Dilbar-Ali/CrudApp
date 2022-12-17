@@ -31,7 +31,18 @@ try{
     return await axios.put(`${API_URL}/${id}`,data)
 
 }catch(error){
-    console.log("Error while calling Editing Api",error.message)
+    console.log("Error while calling Editing Api .",error.message)
 }
 }
 
+
+export const deleteUser=async(id)=>{
+    try{
+    
+        return await axios.delete(`${API_URL}/${id}`);
+    
+    }catch(error){
+        console.log("Error while calling EditingApi .",error.message)
+    }
+    }
+    
